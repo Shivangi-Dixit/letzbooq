@@ -1,7 +1,7 @@
-# LetzBooq - Flight Booking Platform 🚀
+# LetsFly - Flight Booking Platform 🚀
 
 ## 🎯 Overview
-LetzBooq is a full‑stack flight search application that integrates with the Amadeus Flight Offers API. It provides airport autocomplete, date validation, flexible passenger controls, and clear error messages. Built with TypeScript end‑to‑end, the project separates concerns (services, hooks, components) for maintainability and testability.
+LetsFly is a full‑stack flight search application that integrates with the Amadeus Flight Offers API. It provides airport autocomplete, date validation, flexible passenger controls, and clear error messages. Built with TypeScript end‑to‑end, the project separates concerns (services, hooks, components) for maintainability and testability.
 
 **Tech stack:** React 18 + TypeScript, MUI 5, Node.js + Express, Amadeus Self‑Service API
 
@@ -15,7 +15,7 @@ A concise guide to running and developing the app locally, API usage examples, t
 ## 📁 Project Structure (high level)
 
 ```
-letzbooq/
+LetsFly/
 ├── client/                 # Frontend ( React)
 │   └── src/
 │       ├── components/     # Reusable UI components (MUI)
@@ -43,7 +43,7 @@ Prerequisites:
 1) Clone & install
 ```bash
 git clone <your-repo>
-cd letzbooq
+cd letsFly
 
 # Install frontend and backend deps
 cd client && npm install

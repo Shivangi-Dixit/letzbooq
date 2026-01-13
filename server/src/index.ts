@@ -2,4 +2,4 @@ import 'dotenv/config';
 import app from './app';
 
 const PORT = process?.env?.PORT;
-app.listen(PORT, () => console.log(`LetzBooq backend running on port ${PORT}`));
+app.listen(PORT, () => console.log(`letsFly backend running on port ${PORT}`));
