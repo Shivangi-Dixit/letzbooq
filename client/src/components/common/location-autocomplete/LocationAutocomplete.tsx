@@ -12,6 +12,7 @@ import React from 'react';
 import { styles } from './LocationAutocomplete.styles';
 import { useLocationSearch } from '../../../hooks/useLocationSearch';
 import { LocationOption } from '../../../interfaces/location.interface';
+import { ErrorModal } from '../error-modal/ErrorModal';
 
 interface Props {
   label: string;
@@ -22,7 +23,7 @@ export const LocationAutocomplete = ({ label, onSelect }: Props) => {
   const [input, setInput] = useState('');
   const [open, setOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState<LocationOption | null>(null);
-  const { results, loading } = useLocationSearch(input);
+  const { results, loading, error, clearError } = useLocationSearch(input);
 
   const options = React.useMemo(() => {
     const seen = new Set<string>();
@@ -59,6 +60,7 @@ export const LocationAutocomplete = ({ label, onSelect }: Props) => {
   );
 
   return (
+    <>
     <Autocomplete
       open={open && input?.length >= 3}
       onOpen={() => input?.length >= 3 && setOpen(true)}
@@ -119,5 +121,12 @@ export const LocationAutocomplete = ({ label, onSelect }: Props) => {
         </Box>
       )}
     />
+          {error && (
+            <ErrorModal 
+              error={error} 
+              onClose={clearError}
+            />
+          )}
+          </>
   );
 };

@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import axiosInstance from './axiosInstance';
-import { ApiError, Flight, FlightSearchParams } from '../interfaces/flight.interfaces';
+import { Flight, FlightSearchParams } from '../interfaces/flight.interfaces';
 
 interface BackendResponse {
   flights: {
